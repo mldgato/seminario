@@ -435,6 +435,18 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
         }
 
+        .featured-video video {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            /* Altura mínima */
+            max-height: 500px;
+            /* Altura máxima */
+            object-fit: cover;
+            /* Importante: hace que el video llene el contenedor */
+            border-radius: 15px;
+        }
+
         .featured-placeholder {
             width: 100%;
             aspect-ratio: 16/9;
@@ -655,8 +667,11 @@
         <div class="featured-section">
             <div class="featured-content">
                 <div class="featured-video">
-                    <div class="featured-placeholder">
-                        <span class="play-icon">▶️</span>
+                    <div class="featured-video">
+                        <video controls poster="intro-thumbnail.jpg" style="width: 100%; border-radius: 15px;">
+                            <source src="intro.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
                     </div>
                 </div>
                 <div class="featured-info">
@@ -673,10 +688,6 @@
                             <span>8:45 min</span>
                         </div>
                     </div>
-                    <button class="watch-btn">
-                        <span>▶️</span>
-                        Ver Video Completo
-                    </button>
                 </div>
             </div>
         </div>
