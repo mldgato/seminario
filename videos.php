@@ -253,7 +253,47 @@
         <p style="margin-top: 20px; font-size: 0.9rem;">Proyecto desarrollado por estudiantes de Licenciatura en Computación e Informática</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        function filterVideos(category) {
+            const videos = document.querySelectorAll('.video-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Actualizar botones activos
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Filtrar videos
+            videos.forEach(video => {
+                if (category === 'todos') {
+                    video.style.display = 'block';
+                    setTimeout(() => {
+                        video.style.opacity = '1';
+                        video.style.transform = 'scale(1)';
+                    }, 10);
+                } else if (video.getAttribute('data-category') === category) {
+                    video.style.display = 'block';
+                    setTimeout(() => {
+                        video.style.opacity = '1';
+                        video.style.transform = 'scale(1)';
+                    }, 10);
+                } else {
+                    video.style.opacity = '0';
+                    video.style.transform = 'scale(0.9)';
+                    setTimeout(() => {
+                        video.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Inicializar estilos de transición
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('.video-card');
+            videos.forEach(video => {
+                video.style.transition = 'all 0.3s ease';
+            });
+        });
+    </script>
 </body>
 
 </html>

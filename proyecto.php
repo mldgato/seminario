@@ -472,7 +472,31 @@
         <p style="margin-top: 20px; font-size: 0.9rem;">Proyecto desarrollado por estudiantes de Licenciatura en Computación e Informática</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        function openTab(evt, tabName) {
+            // Ocultar todos los contenidos de tabs
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+
+            // Remover clase active de todos los botones
+            var tabBtns = document.getElementsByClassName("tab-btn");
+            for (var i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].classList.remove("active");
+            }
+
+            // Mostrar el tab actual y marcar el botón como activo
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+
+            // Scroll suave al inicio del contenido
+            window.scrollTo({
+                top: document.querySelector('.container').offsetTop - 100,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 
 </html>
