@@ -26,16 +26,19 @@
     </header>
 
     <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="index.php">Inicio</a></li>
-            <li><a href="proyecto.php">El Proyecto</a></li>
-            <li><a href="videos.php" class="active">Videos</a></li>
-            <li><a href="juegos.php">Juegos</a></li>
-            <li><a href="recursos.php">Recursos</a></li>
-            <li><a href="contacto.php">Contacto</a></li>
-        </ul>
-    </nav>
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="proyecto.php">El Proyecto</a></li>
+                <li><a href="videos.php">Videos</a></li>
+                <li><a href="juegos.php">Juegos</a></li>
+                <li><a href="recursos.php">Recursos</a></li>
+                <li><a href="contacto.php">Contacto</a></li>
+            </ul>
+        </nav>
+        <div id="franja"></div>
+    </div>
 
     <!-- Breadcrumb -->
     <div class="breadcrumb">
