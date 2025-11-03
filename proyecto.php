@@ -34,7 +34,6 @@
                 <li><a href="videos.php">Videos</a></li>
                 <li><a href="juegos.php">Juegos</a></li>
                 <li><a href="recursos.php">Recursos</a></li>
-                <li><a href="contacto.php">Contacto</a></li>
             </ul>
         </nav>
         <div id="franja"></div>
@@ -500,6 +499,7 @@
             });
         }
     </script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

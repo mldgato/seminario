@@ -358,3 +358,4 @@ function scrollToTop() {
 // Exportar funciones para uso global si es necesario
 window.filterVideos = filterVideos;
 window.scrollToTop = scrollToTop;
+

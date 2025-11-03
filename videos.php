@@ -34,7 +34,6 @@
                 <li><a href="videos.php">Videos</a></li>
                 <li><a href="juegos.php">Juegos</a></li>
                 <li><a href="recursos.php">Recursos</a></li>
-                <li><a href="contacto.php">Contacto</a></li>
             </ul>
         </nav>
         <div id="franja"></div>
@@ -58,8 +57,8 @@
             <div class="featured-content">
                 <div class="featured-video">
                     <div class="featured-video">
-                        <video controls poster="intro-thumbnail.jpg" style="width: 100%; border-radius: 15px;">
-                            <source src="mp4/intro.mp4" type="video/mp4">
+                        <video controls poster="img/efpem.jpg" style="width: 100%; border-radius: 15px;">
+                            <source src="mp4/video-educativo-proyecto-efpem-de-gestin-integral-de-residuos.mp4" type="video/mp4">
                             Tu navegador no soporta la reproducción de videos.
                         </video>
                     </div>
@@ -68,16 +67,6 @@
                     <span class="featured-badge">⭐ VIDEO DESTACADO</span>
                     <h2>Introducción al Proyecto EFPEM</h2>
                     <p>Conoce los objetivos, alcances y beneficios de nuestro proyecto de gestión integral de residuos sólidos en EFPEM. Un viaje hacia la sostenibilidad ambiental.</p>
-                    <div class="featured-stats">
-                        <div class="featured-stat">
-                            <span class="icon">👁️</span>
-                            <span>1,234 vistas</span>
-                        </div>
-                        <div class="featured-stat">
-                            <span class="icon">⏱️</span>
-                            <span>8:45 min</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -93,6 +82,7 @@
             <button class="filter-btn active" onclick="filterVideos('todos')">📚 Todos</button>
             <button class="filter-btn" onclick="filterVideos('tutorial')">🎯 Tutoriales</button>
             <button class="filter-btn" onclick="filterVideos('documental')">🎥 Documentales</button>
+            <button class="filter-btn" onclick="filterVideos('capsula')">ℹ️ Cápsulas</button>
             <button class="filter-btn" onclick="filterVideos('testimonio')">💬 Testimonios</button>
         </div>
 
@@ -101,94 +91,56 @@
 
         <!-- Videos Grid -->
         <div class="videos-grid">
-            <!-- Video 1 -->
-            <div class="video-card" data-category="tutorial">
-                <div class="video-placeholder">
-                    <span class="play-icon">▶️</span>
-                    <span class="video-duration">10:24</span>
+            <div class="video-card video-card-with-video" data-category="tutorial">
+                <div class="video-wrapper">
+                    <video controls preload="metadata">
+                        <source src="mp4/como-separar-correctamente-los-residuos.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
                 </div>
                 <div class="video-info">
                     <span class="video-category tutorial">Tutorial</span>
                     <h3>¿Cómo Separar Correctamente los Residuos?</h3>
                     <p>Aprende la clasificación correcta de residuos orgánicos, inorgánicos y reciclables con ejemplos prácticos del día a día.</p>
-                    <div class="video-meta">
-                        <div class="video-stats">
-                            <div class="stat-item">
-                                <span class="icon">👁️</span>
-                                <span>856</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="icon">📅</span>
-                                <span>Hace 3 días</span>
-                            </div>
-                        </div>
-                        <button class="like-button">
-                            <span class="heart-icon">❤️</span>
-                            <span>Me gusta</span>
-                        </button>
-                    </div>
                 </div>
             </div>
 
-            <!-- Video 2 -->
-            <div class="video-card" data-category="documental">
-                <div class="video-placeholder">
-                    <span class="play-icon">▶️</span>
-                    <span class="video-duration">15:30</span>
+            <div class="video-card video-card-with-video" data-category="documental">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/P3Ff7AFyzvs?si=Vfuk1EUBhhPtlEcT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
                     <span class="video-category documental">Documental</span>
                     <h3>El Impacto Ambiental de los Residuos en Guatemala</h3>
                     <p>Documental sobre la problemática actual de gestión de residuos en Guatemala y sus efectos en el medio ambiente.</p>
-                    <div class="video-meta">
-                        <div class="video-stats">
-                            <div class="stat-item">
-                                <span class="icon">👁️</span>
-                                <span>1,542</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="icon">📅</span>
-                                <span>Hace 1 semana</span>
-                            </div>
-                        </div>
-                        <button class="like-button">
-                            <span class="heart-icon">❤️</span>
-                            <span>Me gusta</span>
-                        </button>
-                    </div>
                 </div>
             </div>
 
-            <!-- Video 3 -->
-            <div class="video-card" data-category="tutorial">
-                <div class="video-placeholder">
-                    <span class="play-icon">▶️</span>
-                    <span class="video-duration">12:15</span>
+            <div class="video-card video-card-with-video" data-category="tutorial">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/cIOkj7sMrPo?si=7qtlhU6RGIXbNPOP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
                     <span class="video-category tutorial">Tutorial</span>
                     <h3>Compostaje Casero: Paso a Paso</h3>
                     <p>Guía completa para crear tu propio sistema de compostaje en casa y transformar residuos orgánicos en abono natural.</p>
-                    <div class="video-meta">
-                        <div class="video-stats">
-                            <div class="stat-item">
-                                <span class="icon">👁️</span>
-                                <span>2,103</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="icon">📅</span>
-                                <span>Hace 2 semanas</span>
-                            </div>
-                        </div>
-                        <button class="like-button">
-                            <span class="heart-icon">❤️</span>
-                            <span>Me gusta</span>
-                        </button>
-                    </div>
                 </div>
             </div>
 
-            <!-- Video 4 -->
+            <div class="video-card video-card-with-video" data-category="tutorial">
+                <div class="video-wrapper">
+                    <video controls preload="metadata">
+                        <source src="mp4/Reduce Reusa Recicla.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-category tutorial">Tutorial</span>
+                    <h3>Reduce Reusa Recicla</h3>
+                    <p>Aprende sobre las tres R.</p>
+                </div>
+            </div>
+
             <div class="video-card" data-category="testimonio">
                 <div class="video-placeholder">
                     <span class="play-icon">▶️</span>
@@ -198,53 +150,93 @@
                     <span class="video-category testimonio">Testimonio</span>
                     <h3>Estudiantes EFPEM: Nuestra Experiencia</h3>
                     <p>Testimonios de estudiantes sobre su participación en el proyecto de gestión de residuos y su impacto formativo.</p>
-                    <div class="video-meta">
-                        <div class="video-stats">
-                            <div class="stat-item">
-                                <span class="icon">👁️</span>
-                                <span>678</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="icon">📅</span>
-                                <span>Hace 4 días</span>
-                            </div>
-                        </div>
-                        <button class="like-button">
-                            <span class="heart-icon">❤️</span>
-                            <span>Me gusta</span>
-                        </button>
-                    </div>
                 </div>
             </div>
 
-            <!-- Video 5 -->
-            <div class="video-card" data-category="documental">
-                <div class="video-placeholder">
-                    <span class="play-icon">▶️</span>
-                    <span class="video-duration">18:20</span>
+            <div class="video-card video-card-with-video" data-category="documental">
+                <div class="video-wrapper">
+                    <video controls preload="metadata">
+                        <source src="mp4/reglamento-164-2021-video-educativo.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
                 </div>
                 <div class="video-info">
                     <span class="video-category documental">Documental</span>
                     <h3>Reglamento 164-2021: ¿Qué Necesitas Saber?</h3>
                     <p>Explicación detallada del Reglamento para la Gestión Integral de Residuos y su aplicación en instituciones educativas.</p>
-                    <div class="video-meta">
-                        <div class="video-stats">
-                            <div class="stat-item">
-                                <span class="icon">👁️</span>
-                                <span>1,289</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="icon">📅</span>
-                                <span>Hace 5 días</span>
-                            </div>
-                        </div>
-                        <button class="like-button">
-                            <span class="heart-icon">❤️</span>
-                            <span>Me gusta</span>
-                        </button>
-                    </div>
                 </div>
             </div>
+
+            <div class="video-card video-card-with-video" data-category="capsula">
+                <div class="video-wrapper">
+                    <video controls preload="metadata">
+                        <source src="mp4/Capsula 1 - Separación de Residuos.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-category capsula">Cápsula Informativa</span>
+                    <h3>Capsula informativa 1</h3>
+                    <p>Separación de Residuos.</p>
+                </div>
+            </div>
+
+            <div class="video-card video-card-with-video" data-category="capsula">
+                <div class="video-wrapper">
+                    <video controls preload="metadata">
+                        <source src="mp4/Capsula 2 - Guía Rápida para Reciclar Correctamente.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-category capsula">Cápsula Informativa</span>
+                    <h3>Capsula informativa 2</h3>
+                    <p>Guía Rápida para Reciclar Correctamente.</p>
+                </div>
+            </div>
+
+            <div class="video-card video-card-with-video" data-category="capsula">
+                <div class="video-wrapper">
+                    <video controls preload="metadata">
+                        <source src="mp4/Capsula 3 - Regla de las 3Rs.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-category capsula">Cápsula Informativa</span>
+                    <h3>Capsula informativa 3</h3>
+                    <p>Regla de las 3Rs.</p>
+                </div>
+            </div>
+
+            <div class="video-card video-card-with-video" data-category="documental">
+                <div class="video-wrapper">
+                    <video controls preload="metadata">
+                        <source src="mp4/Capsula 4 - Taller-FEDECON.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-category documental">Documental</span>
+                    <h3>Taller</h3>
+                    <p>FEDECON.</p>
+                </div>
+            </div>
+
+            <div class="video-card video-card-with-video" data-category="capsula">
+                <div class="video-wrapper">
+                    <video controls preload="metadata">
+                        <source src="mp4/Capsula 4 - Acuerdo.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-category capsula">Cápsula Informativa</span>
+                    <h3>Capsula informativa 4</h3>
+                    <p>Acuerdo gubernativo 164-2021.</p>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -297,6 +289,7 @@
             });
         });
     </script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

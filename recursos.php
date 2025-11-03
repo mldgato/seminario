@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos - Gestión de Residuos EFPEM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-top"></div>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="img/Escudo USAC fondos oscuros.png" alt="USAC" class="logo-usac">
+                <img src="img/logo invertido EFPEM.png" alt="EFPEM" class="logo-efpem">
+            </div>
+            <div class="title-section">
+                <h1>Proyecto de Gestión Integral de Residuos</h1>
+                <p>EFPEM - Universidad de San Carlos de Guatemala</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="proyecto.php">El Proyecto</a></li>
+                <li><a href="videos.php">Videos</a></li>
+                <li><a href="juegos.php">Juegos</a></li>
+                <li><a href="recursos.php">Recursos</a></li>
+            </ul>
+        </nav>
+        <div id="franja"></div>
+    </div>
+
+    <div class="breadcrumb">
+        <a href="index.php">Inicio</a> / <span>Recursos Educativos</span>
+    </div>
+
+    <section class="hero">
+        <h2>📚 Recursos Educativos</h2>
+        <p>Descarga guías, manuales y documentos oficiales de apoyo para el proyecto</p>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Biblioteca de Descargas</h2>
+        <p class="section-description">Haz clic en cualquier recurso para iniciar la descarga del documento PDF</p>
+
+        <div class="recursos-grid">
+
+            <div class="recurso-card">
+                <a href="docs/Dónde tirar la basura.pdf" download="Donde-tirar-la-basura.pdf" class="recurso-link">
+                    <div class="recurso-imagen">
+                        <img src="img/Dónde tirar la basura.png" alt="Vista previa de Guía Dónde tirar la basura">
+                    </div>
+                    <div class="recurso-info">
+                        <h3>Dónde tirar la basura</h3>
+                        <p>Una guía rápida y visual para identificar fácilmente en qué contenedor va cada tipo de residuo común.</p>
+                        <span class="btn-descargar">Descargar PDF</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="recurso-card">
+                <a href="docs/Infografía Reciclaje.pdf" download="Infografia-Reciclaje.pdf" class="recurso-link">
+                    <div class="recurso-imagen">
+                        <img src="img/Infografía Reciclaje.png" alt="Vista previa de Infografía de Reciclaje">
+                    </div>
+                    <div class="recurso-info">
+                        <h3>Infografía de Reciclaje</h3>
+                        <p>Datos clave, consejos y el porqué del reciclaje presentados de forma clara y gráfica para facilitar el aprendizaje.</p>
+                        <span class="btn-descargar">Descargar PDF</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="recurso-card">
+                <a href="docs/Separa hoy para un mejor mañana.pdf" download="Separa-hoy-para-un-mejor-mañana.pdf" class="recurso-link">
+                    <div class="recurso-imagen">
+                        <img src="img/Separa hoy para un mejor mañana.png" alt="Vista previa de Separa hoy para un mejor mañana">
+                    </div>
+                    <div class="recurso-info">
+                        <h3>Separa hoy para un mejor mañana</h3>
+                        <p>Documento educativo que explica la importancia de la clasificación de residuos para el futuro sostenible de EFPEM.</p>
+                        <span class="btn-descargar">Descargar PDF</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+El resto del archivo `recursos.php` y los estilos CSS que te proporcioné antes siguen siendo válidos y no necesitan cambios.
+    </div>
+
+    <footer>
+        <p><strong>Escuela de Formación de Profesores de Enseñanza Media - EFPEM</strong></p>
+        <p>Universidad de San Carlos de Guatemala</p>
+        <p>Seminario 2025 | <a href="https://www.efpemusac.org/" target="_blank">www.efpemusac.org</a></p>
+        <p style="margin-top: 20px; font-size: 0.9rem;">Proyecto desarrollado por estudiantes de Licenciatura en Computación e Informática</p>
+    </footer>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

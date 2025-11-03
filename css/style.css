@@ -408,6 +408,10 @@ nav ul li a.active {
     background: #b0142b;
 }
 
+.video-category.capsula {
+    background: #0FA2DC;
+}
+
 .video-category.testimonio {
     background: #aa132a;
 }
@@ -1154,5 +1158,276 @@ footer a:hover {
     .foda-table th,
     .foda-table td {
         padding: 15px;
+    }
+}
+
+/* ========================================
+   VIDEO REAL EN CARDS
+   ======================================== */
+
+.video-wrapper {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-card-with-video {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-card-with-video .video-info {
+    flex: 1;
+}
+
+.video-card-with-video:hover .video-wrapper {
+    box-shadow: 0 8px 20px rgba(18, 161, 220, 0.3);
+}
+
+/* ========================================
+   IFRAME DE YOUTUBE EN VIDEO WRAPPER
+   ======================================== */
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px 15px 0 0;
+}
+
+/* ========================================
+   RECURSOS (Página Recursos)
+   ======================================== */
+
+.recursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 35px;
+    margin-bottom: 60px;
+}
+
+.recurso-card {
+    background: #FFFFFF;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    display: flex;
+    /* Para asegurar que el <a> ocupe todo */
+    flex-direction: column;
+}
+
+.recurso-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(18, 161, 220, 0.3);
+    border-color: #12A1DC;
+}
+
+.recurso-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* Asegura que el link llene la tarjeta */
+}
+
+.recurso-imagen {
+    width: 100%;
+    aspect-ratio: 16/10;
+    /* Un aspect ratio bueno para vistas previas */
+    background: #f0f4f8;
+    overflow: hidden;
+}
+
+.recurso-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que la imagen cubra el espacio */
+    transition: transform 0.3s ease;
+}
+
+.recurso-card:hover .recurso-imagen img {
+    transform: scale(1.05);
+}
+
+.recurso-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Hace que esta sección crezca para llenar el espacio */
+}
+
+.recurso-info h3 {
+    color: #0E2144;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.recurso-info p {
+    color: #000000;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    /* Empuja el botón hacia abajo */
+}
+
+.btn-descargar {
+    display: inline-block;
+    text-align: center;
+    padding: 12px 30px;
+    background: #b0142b;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.recurso-card:hover .btn-descargar {
+    background: #aa132a;
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(176, 20, 43, 0.4);
+}
+
+/* ========================================
+   JUEGOS (Página Juegos)
+   ======================================== */
+
+.juego-container {
+    background: #FFFFFF;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    border-top: 4px solid #12A1DC;
+}
+
+.juego-titulo {
+    color: #0E2144;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.juego-wrapper {
+    /* El juego no será 100% ancho en pantallas grandes para mejor legibilidad */
+    width: 90%;
+    margin: 0 auto;
+    max-width: 900px;
+    /* Límite máximo para el juego */
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    /* Asegura que el iframe mantenga los bordes redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.juego-iframe-responsive {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /* Calculamos el aspect-ratio del iframe (380 / 500) * 100 = 76%
+       Esto mantiene la proporción del juego en cualquier ancho.
+    */
+    padding-top: 76%;
+}
+
+.juego-iframe-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.juego-descripcion {
+    text-align: center;
+    color: #000000;
+    font-size: 1.1rem;
+    margin-top: 25px;
+    /* Un poco de padding horizontal para que no toque los bordes en móvil */
+    padding: 0 5%;
+}
+
+.juego-separador {
+    border: 0;
+    height: 2px;
+    /* Un gradiente sutil para el separador */
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), #12A1DC, rgba(255, 255, 255, 0));
+    margin: 60px 0;
+}
+
+/* Estilos para los placeholders de futuros juegos */
+.juego-container-placeholder {
+    text-align: center;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    border: 2px dashed #437DBF;
+}
+
+.placeholder-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    /* Para que se apilen en móviles */
+}
+
+.placeholder-card {
+    background: #FFFFFF;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    color: #437DBF;
+    min-width: 220px;
+}
+
+.placeholder-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.placeholder-card h4 {
+    color: #0E2144;
+    font-size: 1.2rem;
+}
+
+/* Ajuste responsivo para el wrapper del juego */
+@media (max-width: 768px) {
+    .juego-wrapper {
+        width: 100%;
+        /* El juego ocupa todo el ancho en móviles */
+    }
+
+    .juego-descripcion {
+        padding: 0;
+        /* Sin padding extra en móvil */
+    }
+
+    .juego-titulo {
+        font-size: 1.5rem;
     }
 }
