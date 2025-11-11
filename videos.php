@@ -196,7 +196,7 @@
                     <p>Regla de las 3Rs.</p>
                 </div>
             </div>
-
+            
             <div class="video-card video-card-with-video" data-category="documental">
                 <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/ikr2ewUEGDw?si=JnEYoeykQmj1g9-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
