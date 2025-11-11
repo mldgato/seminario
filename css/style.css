@@ -233,6 +233,140 @@ nav ul li a.active {
 }
 
 /* ========================================
+   SEMINARISTAS (Tab 0) - NUEVO
+   ======================================== */
+
+.seminaristas-list {
+    background: #FFFFFF;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.seminaristas-list ol {
+    list-style: none;
+    counter-reset: seminarista-counter;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.seminaristas-list ol li {
+    counter-increment: seminarista-counter;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%);
+    padding: 18px 25px;
+    border-radius: 10px;
+    border-left: 4px solid #12A1DC;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.seminaristas-list ol li:hover {
+    transform: translateX(8px);
+    box-shadow: 0 4px 15px rgba(18, 161, 220, 0.2);
+    border-left-color: #437DBF;
+}
+
+.seminaristas-list ol li::before {
+    content: counter(seminarista-counter);
+    background: linear-gradient(135deg, #437DBF 0%, #12A1DC 100%);
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1.1rem;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(67, 125, 191, 0.3);
+}
+
+.seminaristas-list ol li {
+    color: #0E2144;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Responsive para tablets */
+@media (max-width: 1024px) {
+    .seminaristas-list ol {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .seminaristas-list {
+        padding: 25px 20px;
+    }
+
+    .seminaristas-list ol li {
+        padding: 15px 20px;
+        font-size: 0.95rem;
+    }
+
+    .seminaristas-list ol li::before {
+        min-width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   FOTO DE SEMINARISTAS
+   ======================================== */
+
+.seminaristas-photo {
+    margin-top: 50px;
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #b0142b;
+}
+
+.seminaristas-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.seminaristas-photo img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.photo-caption {
+    text-align: center;
+    color: #437DBF;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #e3f2fd;
+}
+
+@media (max-width: 768px) {
+    .seminaristas-photo {
+        padding: 20px;
+        margin-top: 30px;
+    }
+
+    .photo-caption {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
    FILTER & TAB BUTTONS
    ======================================== */
 .filter-buttons,

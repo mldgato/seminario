@@ -141,18 +141,6 @@
                 </div>
             </div>
 
-            <div class="video-card" data-category="testimonio">
-                <div class="video-placeholder">
-                    <span class="play-icon">▶️</span>
-                    <span class="video-duration">8:45</span>
-                </div>
-                <div class="video-info">
-                    <span class="video-category testimonio">Testimonio</span>
-                    <h3>Estudiantes EFPEM: Nuestra Experiencia</h3>
-                    <p>Testimonios de estudiantes sobre su participación en el proyecto de gestión de residuos y su impacto formativo.</p>
-                </div>
-            </div>
-
             <div class="video-card video-card-with-video" data-category="documental">
                 <div class="video-wrapper">
                     <video controls preload="metadata">
@@ -211,10 +199,7 @@
 
             <div class="video-card video-card-with-video" data-category="documental">
                 <div class="video-wrapper">
-                    <video controls preload="metadata">
-                        <source src="mp4/Capsula 4 - Taller-FEDECON.mp4" type="video/mp4">
-                        Tu navegador no soporta la reproducción de videos.
-                    </video>
+                    <iframe src="https://www.youtube.com/embed/ikr2ewUEGDw?si=JnEYoeykQmj1g9-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
                     <span class="video-category documental">Documental</span>
@@ -234,6 +219,20 @@
                     <span class="video-category capsula">Cápsula Informativa</span>
                     <h3>Capsula informativa 4</h3>
                     <p>Acuerdo gubernativo 164-2021.</p>
+                </div>
+            </div>
+
+            <div class="video-card video-card-with-video" data-category="capsula">
+                <div class="video-wrapper">
+                    <video controls preload="metadata">
+                        <source src="mp4/La_guerra_por_la_basura.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-category capsula">Cápsula Informativa</span>
+                    <h3>Capsula informativa 5</h3>
+                    <p>La guerra por la basura.</p>
                 </div>
             </div>
 
